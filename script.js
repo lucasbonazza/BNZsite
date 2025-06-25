@@ -72,22 +72,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Botões copiar no script
-  const copyButtons = document.querySelectorAll('.btn-copy');
-  copyButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const codeBlock = btn.previousElementSibling; // O <code> antes do botão
-      if(codeBlock && codeBlock.tagName.toLowerCase() === 'code') {
-        navigator.clipboard.writeText(codeBlock.innerText.trim())
-          .then(() => {
-            btn.textContent = 'Copiado!';
-            setTimeout(() => btn.textContent = 'Copiar', 2000);
-          })
-          .catch(() => {
-            btn.textContent = 'Erro ao copiar';
-            setTimeout(() => btn.textContent = 'Copiar', 2000);
-          });
-      }
-    });
+// Botões copiar no script
+const copyButtons = document.querySelectorAll('.btn-copy');
+copyButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const codeBlock = btn.previousElementSibling; // O <code> antes do botão
+    if(codeBlock && codeBlock.tagName.toLowerCase() === 'code') {
+      navigator.clipboard.writeText(codeBlock.innerText.trim())
+        .then(() => {
+          btn.textContent = 'Copiado!';
+          setTimeout(() => btn.textContent = 'Copiar', 2000);
+        })
+        .catch(() => {
+          btn.textContent = 'Erro ao copiar';
+          setTimeout(() => btn.textContent = 'Copiar', 2000);
+        });
+    }
   });
 });
