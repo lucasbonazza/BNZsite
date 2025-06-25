@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tab.classList.add('active');
       const target = tab.getAttribute('data-tab');
       const content = document.getElementById(target);
-      if(content) content.classList.add('active');
+      if (content) content.classList.add('active');
 
       // Esconde todos detalhes (executor/script)
       hideAllDetails();
@@ -36,10 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
   executorCards.forEach(card => {
     card.addEventListener('click', () => {
       const id = card.getAttribute('data-id');
-      if(!id) return;
+      if (!id) return;
       hideAllDetails();
       const detail = document.getElementById(id);
-      if(detail) {
+      if (detail) {
         detail.classList.remove('hidden');
         detail.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
@@ -51,10 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
   scriptCards.forEach(card => {
     card.addEventListener('click', () => {
       const id = card.getAttribute('data-id');
-      if(!id) return;
+      if (!id) return;
       hideAllDetails();
       const detail = document.getElementById(id);
-      if(detail) {
+      if (detail) {
         detail.classList.remove('hidden');
         detail.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
@@ -66,27 +66,28 @@ document.addEventListener('DOMContentLoaded', () => {
   closeButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       const parent = btn.closest('.executor-details, .script-details');
-      if(parent) {
+      if (parent) {
         parent.classList.add('hidden');
       }
     });
   });
 
-// Botões copiar no script
-const copyButtons = document.querySelectorAll('.btn-copy');
-copyButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const codeBlock = btn.previousElementSibling; // O <code> antes do botão
-    if(codeBlock && codeBlock.tagName.toLowerCase() === 'code') {
-      navigator.clipboard.writeText(codeBlock.innerText.trim())
-        .then(() => {
-          btn.textContent = 'Copiado!';
-          setTimeout(() => btn.textContent = 'Copiar', 2000);
-        })
-        .catch(() => {
-          btn.textContent = 'Erro ao copiar';
-          setTimeout(() => btn.textContent = 'Copiar', 2000);
-        });
-    }
+  // Botões copiar no script
+  const copyButtons = document.querySelectorAll('.btn-copy');
+  copyButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const codeBlock = btn.previousElementSibling; // O <code> antes do botão
+      if (codeBlock && codeBlock.tagName.toLowerCase() === 'code') {
+        navigator.clipboard.writeText(codeBlock.innerText.trim())
+          .then(() => {
+            btn.textContent = 'Copiado!';
+            setTimeout(() => btn.textContent = 'Copiar', 2000);
+          })
+          .catch(() => {
+            btn.textContent = 'Erro ao copiar';
+            setTimeout(() => btn.textContent = 'Copiar', 2000);
+          });
+      }
+    });
   });
 });
