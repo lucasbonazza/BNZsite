@@ -17,6 +17,7 @@
         <li><a href="#" data-tab="inicio" class="active">Início</a></li>
         <li><a href="#" data-tab="executores">Executores</a></li>
         <li><a href="#" data-tab="scripts">Scripts</a></li>
+        <li><a href="#" data-tab="loadstring">Loadstring</a></li>
         <li><a href="#" data-tab="misc">Misc</a></li>
         <li><a href="#" data-tab="redes">Redes</a></li>
       </ul>
@@ -130,13 +131,17 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/h
             <button class="btn-close">Fechar</button>
           </div>
         </div>
+      </section>
 
-        <!-- LOADSTRING GENERATOR -->
+      <!-- LOADSTRING GENERATOR -->
+      <section id="loadstring" class="tab-content">
+        <h1>Gerador de Loadstring</h1>
         <div class="loadstring-generator">
-          <h2>Gerador de Loadstring</h2>
           <input type="text" id="load-input" placeholder="Cole o link do script aqui" />
-          <button id="btn-generate">Gerar Loadstring</button>
-          <button id="btn-clear-load">Limpar</button>
+          <div class="btn-group">
+            <button id="btn-generate">Gerar Loadstring</button>
+            <button id="btn-clear-load">Limpar</button>
+          </div>
           <div id="load-result" class="hidden">
             <code id="load-output"></code>
             <button class="btn-copy">Copiar</button>
