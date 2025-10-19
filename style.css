@@ -1,29 +1,36 @@
-/* Reset básico */
+/* =======================
+   RESET E TIPOGRAFIA
+======================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background: #121212;
-  color: #eee;
+  background: #0f1115;
+  color: #f0f0f0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 header {
-  background: #20232a;
+  background: linear-gradient(90deg, #ff4c4c, #ff1a1a);
   padding: 20px;
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
+  color: #fff;
   letter-spacing: 2px;
-  color: #e74c3c;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
+/* =======================
+   LAYOUT PRINCIPAL
+======================= */
 .layout {
   display: flex;
   flex: 1;
@@ -32,9 +39,10 @@ header {
 }
 
 .sidebar {
-  width: 200px;
-  background: #1f1f1f;
+  width: 220px;
+  background: #1a1c21;
   padding-top: 30px;
+  border-right: 2px solid #ff4c4c;
 }
 
 .sidebar ul {
@@ -46,30 +54,35 @@ header {
 }
 
 .sidebar ul li a {
-  color: #ccc;
+  color: #bbb;
   text-decoration: none;
   font-weight: 600;
   display: block;
-  padding: 12px 20px;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
+  padding: 14px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .sidebar ul li a.active,
 .sidebar ul li a:hover {
-  background: #e74c3c;
-  color: #121212;
+  background: #ff4c4c;
+  color: #fff;
+  transform: translateX(5px);
+  box-shadow: 0 3px 8px rgba(255,76,76,0.6);
 }
 
 .container {
   flex: 1;
-  background: #181818;
-  padding: 20px;
+  background: #12141a;
+  padding: 25px;
   overflow-y: auto;
   position: relative;
 }
 
+/* =======================
+   ABAS
+======================= */
 .tab-content {
   display: none;
 }
@@ -78,11 +91,13 @@ header {
   display: block;
 }
 
-/* INICIO */
+/* =======================
+   INTRODUÇÃO
+======================= */
 .intro-box {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   margin-bottom: 30px;
 }
 
@@ -91,32 +106,35 @@ header {
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #e74c3c;
+  border: 3px solid #ff4c4c;
+  box-shadow: 0 4px 10px rgba(255,76,76,0.5);
 }
 
 .intro-text h1 {
   font-size: 2.8rem;
   margin-bottom: 10px;
-  color: #e74c3c;
+  color: #ff4c4c;
 }
 
 .intro-text p {
   font-size: 1.1rem;
-  color: #ccc;
+  color: #ddd;
   max-width: 600px;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .social-links a {
-  color: #e74c3c;
+  display: inline-block;
+  color: #ff4c4c;
   margin-right: 20px;
   font-size: 1.2rem;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #c0392b;
+  color: #ff1a1a;
+  transform: scale(1.05);
 }
 
 .banner-container {
@@ -127,33 +145,36 @@ header {
   width: 100%;
   max-height: 300px;
   object-fit: cover;
-  border-radius: 10px;
-  border: 2px solid #e74c3c;
+  border-radius: 12px;
+  border: 2px solid #ff4c4c;
+  box-shadow: 0 6px 15px rgba(255,76,76,0.4);
 }
 
-/* CARDS */
+/* =======================
+   CARDS - EXECUTORES E SCRIPTS
+======================= */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 25px;
   margin-bottom: 30px;
 }
 
 .card,
 .script-card {
-  background: #222;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgb(231 76 60 / 0.3);
+  background: #1e2027;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(255,76,76,0.3);
   cursor: pointer;
   text-align: center;
-  padding: 15px 10px 20px;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  padding: 20px 10px 25px;
+  transition: all 0.3s ease;
 }
 
 .card:hover,
 .script-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgb(231 76 60 / 0.6);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(255,76,76,0.6);
 }
 
 .card img,
@@ -163,39 +184,31 @@ header {
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 12px;
-  border: 2px solid #e74c3c;
+  border: 2px solid #ff4c4c;
 }
 
 .card p,
 .script-card p {
   font-weight: 700;
   font-size: 1.15rem;
-  color: #e74c3c;
+  color: #ff4c4c;
   text-transform: capitalize;
 }
 
-/* DETALHES */
-.details-container {
-  position: relative;
-}
-
+/* =======================
+   DETALHES
+======================= */
 .executor-details,
 .script-details {
-  background: #222;
-  border-radius: 12px;
+  background: #1f2128;
+  border-radius: 15px;
   padding: 25px;
-  box-shadow: 0 0 20px rgb(231 76 60 / 0.6);
   max-width: 600px;
   margin: 0 auto 30px auto;
-  color: #ccc;
-  position: relative;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-.executor-details:hover,
-.script-details:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 30px rgb(231 76 60 / 0.7);
+  color: #ddd;
+  box-shadow: 0 6px 20px rgba(255,76,76,0.6);
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
 .executor-details img,
@@ -203,51 +216,55 @@ header {
   width: 150px;
   height: 150px;
   object-fit: cover;
-  border-radius: 10px;
-  border: 2px solid #e74c3c;
+  border-radius: 12px;
+  border: 2px solid #ff4c4c;
   display: block;
   margin: 15px auto;
 }
 
 .executor-details h2,
 .script-details h2 {
-  color: #e74c3c;
-  margin-bottom: 10px;
-  text-align: center;
+  color: #ff4c4c;
+  margin-bottom: 15px;
 }
 
 .executor-details p a,
 .script-details p a {
-  color: #c0392b;
+  color: #ff6b6b;
   text-decoration: none;
   font-weight: 600;
   display: block;
-  text-align: center;
   margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.executor-details p a:hover,
+.script-details p a:hover {
+  color: #ff1a1a;
 }
 
 .btn-close,
 .script-details button {
-  background-color: #e74c3c;
+  background-color: #ff4c4c;
   color: white;
   border: none;
-  padding: 10px 18px;
-  margin-right: 8px;
-  border-radius: 6px;
+  padding: 12px 20px;
+  margin-right: 10px;
+  border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
 }
 
+.btn-close:hover,
 .script-details button:hover {
-  background-color: #c0392b;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  background-color: #ff1a1a;
+  transform: translateY(-2px);
 }
 
+.btn-close:active,
 .script-details button:active {
-  background-color: #992d22;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  background-color: #b32424;
   transform: translateY(1px);
 }
 
@@ -255,23 +272,96 @@ header {
   display: none !important;
 }
 
-.script-details code {
-  display: block;
-  background-color: #1e1e1e;
+/* =======================
+   LOADSTRING GENERATOR
+======================= */
+#loadstring-tab {
+  background-color: #1f2128;
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  box-shadow: 0 6px 25px rgba(255,76,76,0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #ddd;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#loadstring-tab:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(255,76,76,0.7);
+}
+
+#loadstring-tab h2 {
+  color: #ff4c4c;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#loadstring-tab input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: #222;
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: inset 0 0 12px rgba(0,0,0,0.7);
+}
+
+#loadstring-tab input:focus {
+  outline: none;
+  box-shadow: 0 0 15px #ff4c4c;
+}
+
+#loadstring-tab .btn-group {
+  display: flex;
+  gap: 12px;
+}
+
+#loadstring-tab .btn-group button {
+  flex: 1;
+  background-color: #ff4c4c;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#loadstring-tab .btn-group button:hover {
+  background-color: #ff1a1a;
+  transform: translateY(-2px);
+}
+
+#loadstring-tab .btn-group button:active {
+  background-color: #b32424;
+  transform: translateY(1px);
+}
+
+#loadstring-tab pre,
+#loadstring-tab code {
+  background-color: #222;
   color: #d4d4d4;
   padding: 15px 20px;
   border-radius: 12px;
-  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  font-family: 'Fira Code', monospace;
   font-size: 14px;
   line-height: 1.5;
   overflow-x: auto;
-  box-shadow: inset 0 0 15px rgba(0,0,0,0.8);
   border: 1px solid #333;
-  margin-bottom: 15px;
   user-select: text;
+  margin-bottom: 10px;
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.8);
 }
 
-/* REDES SOCIAIS */
+/* =======================
+   REDES SOCIAIS
+======================= */
 .redes-container {
   display: flex;
   flex-wrap: wrap;
@@ -285,36 +375,38 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #222;
+  background-color: #1f2128;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(231,76,60,0.5);
-  width: 200px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 220px;
+  box-shadow: 0 6px 15px rgba(255,76,76,0.5);
+  transition: all 0.3s ease;
   text-align: center;
 }
 
 .rede-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(231,76,60,0.7);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(255,76,76,0.7);
 }
 
 .rede-img {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   object-fit: contain;
   margin-bottom: 15px;
   border-radius: 10px;
-  border: 2px solid #e74c3c;
+  border: 2px solid #ff4c4c;
 }
 
 .rede-nome {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #e74c3c;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ff4c4c;
 }
 
-/* RESPONSIVO */
+/* =======================
+   RESPONSIVO
+======================= */
 @media (max-width: 768px) {
   .layout {
     flex-direction: column;
@@ -324,7 +416,8 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #1a1a1a;
+    border-right: none;
+    border-bottom: 2px solid #ff4c4c;
   }
 
   .sidebar ul {
@@ -338,8 +431,8 @@ header {
     margin: 5px;
   }
 
-  .container {
-    padding: 10px;
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .intro-box {
@@ -347,155 +440,11 @@ header {
     text-align: center;
   }
 
-  .card-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .banner-img {
-    max-height: 200px;
-  }
-
   .rede-box {
-    width: 150px;
+    width: 100%;
   }
 
   .rede-img {
-    margin: 0 0 10px 0;
+    margin-bottom: 15px;
   }
 }
-
-/* ======================
-   LOADSTRING GENERATOR
-====================== */
-#loadstring-tab {
-  background-color: #222;
-  border-radius: 12px;
-  padding: 25px;
-  max-width: 600px;
-  margin: 0 auto 30px auto;
-  box-shadow: 0 0 25px rgb(231 76 60 / 0.6);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  color: #ccc;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-#loadstring-tab:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 35px rgb(231 76 60 / 0.7);
-}
-
-#loadstring-tab h2 {
-  color: #e74c3c;
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-#loadstring-tab input {
-  width: 100%;
-  padding: 12px 15px;
-  border-radius: 8px;
-  border: none;
-  background-color: #1e1e1e;
-  color: #eee;
-  font-size: 1rem;
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.7);
-}
-
-#loadstring-tab input:focus {
-  outline: none;
-  box-shadow: 0 0 15px #e74c3c;
-}
-
-#loadstring-tab .btn-group {
-  display: flex;
-  gap: 10px;
-}
-
-#loadstring-tab .btn-group button {
-  flex: 1;
-  background-color: #e74c3c;
-  color: #fff;
-  font-weight: bold;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
-}
-
-#loadstring-tab .btn-group button:hover {
-  background-color: #c0392b;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
-  transform: translateY(-2px);
-}
-
-#loadstring-tab .btn-group button:active {
-  background-color: #992d22;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  transform: translateY(1px);
-}
-
-#loadstring-tab pre,
-#loadstring-tab code {
-  background-color: #1e1e1e;
-  color: #d4d4d4;
-  padding: 15px 20px;
-  border-radius: 12px;
-  font-family: 'Fira Code', 'Courier New', Courier, monospace;
-  font-size: 14px;
-  line-height: 1.5;
-  overflow-x: auto;
-  box-shadow: inset 0 0 15px rgba(0,0,0,0.8);
-  border: 1px solid #333;
-  margin-bottom: 10px;
-  user-select: text;
-}
-
-/* ======================
-   REDES SOCIAIS MELHORADAS
-====================== */
-.redes-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.rede-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #222;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(231,76,60,0.5);
-  width: 200px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-}
-
-.rede-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(231,76,60,0.7);
-}
-
-.rede-img {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  border: 2px solid #e74c3c;
-}
-
-.rede-nome {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #e74c3c;
-}
-
