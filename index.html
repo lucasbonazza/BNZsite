@@ -115,92 +115,104 @@
         </div>
       </section>
 
-      <!-- SCRIPTS -->
-      <section id="scripts" class="tab-content">
-        <h1>Scripts</h1>
-        <div class="sub-tabs">
-          <button class="sub-tab default active" data-sub="scripts-jogos">Jogos</button>
-          <button class="sub-tab" data-sub="scripts-universal">Universal</button>
-        </div>
+     <!-- SCRIPTS -->
+<section id="scripts" class="tab-content">
+  <h1>Scripts</h1>
+  <div class="sub-tabs">
+    <button class="sub-tab default active" data-sub="scripts-jogos">Jogos</button>
+    <button class="sub-tab" data-sub="scripts-universal">Universal</button>
+  </div>
 
-        <div id="scripts-jogos" class="sub-tab-content active">
-          <div class="card-container">
-            <div class="script-card" data-id="script1">
-              <img src="img/script1.png" alt="Apocalypse Rising 2" />
-              <p>Apocalypse Rising 2</p>
-            </div>
-            <div class="script-card" data-id="script2">
-              <img src="img/script2.png" alt="RedZHub" />
-              <p>RedZHub</p>
-            </div>
-            <div class="script-card" data-id="script3">
-              <img src="img/script3.png" alt="Plants vs Brainrots" />
-              <p>Plants vs Brainrots</p>
-            </div>
-          </div>
-        </div>
+  <!-- JOGOS -->
+  <div id="scripts-jogos" class="sub-tab-content active">
+    <div class="card-container">
+      <div class="script-card" data-id="script1">
+        <img src="img/script1.png" alt="Apocalypse Rising 2" />
+        <p>Apocalypse Rising 2</p>
+      </div>
+      <div class="script-card" data-id="script2">
+        <img src="img/script2.png" alt="RedZHub" />
+        <p>RedZHub</p>
+      </div>
+      <div class="script-card" data-id="script3">
+        <img src="img/script3.png" alt="Plants vs Brainrots" />
+        <p>Plants vs Brainrots</p>
+      </div>
+      <div class="script-card" data-id="script4">
+        <img src="img/script4.png" alt="Counter Blox" />
+        <p>Counter Blox</p>
+      </div>
+      <div class="script-card" data-id="script5">
+        <img src="img/script5.png" alt="MM2" />
+        <p>MM2</p>
+      </div>
+    </div>
+  </div>
 
-        <div id="scripts-universal" class="sub-tab-content">
-          <div class="card-container">
-            <div class="script-card" data-id="script4">
-              <img src="img/script4.png" alt="Counter Blox" />
-              <p>Counter Blox</p>
-            </div>
-            <div class="script-card" data-id="script5">
-              <img src="img/script5.png" alt="MM2" />
-              <p>MM2</p>
-            </div>
-            <div class="script-card" data-id="script6">
-              <img src="img/script6.png" alt="Outro Script" />
-              <p>Outro Script</p>
-            </div>
-          </div>
-        </div>
+  <!-- UNIVERSAL -->
+  <div id="scripts-universal" class="sub-tab-content">
+    <div class="card-container">
+      <div class="script-card" data-id="script6">
+        <img src="img/script6.png" alt="Fly universal" />
+        <p>Fly universal</p>
+      </div>
+      <div class="script-card" data-id="script7">
+        <img src="img/script7.png" alt="Esp universal" />
+        <p>Esp universal</p>
+      </div>
+    </div>
+  </div>
 
-        <div class="details-container">
-          <div id="script1" class="script-details hidden">
-            <h2>Script Apocalypse Rising 2 atualizado!</h2>
-            <code>loadstring(game:HttpGet("https://raiidev.xyz/rain/loader"))()</code>
-            <button class="btn-copy">Copiar</button>
-            <button class="btn-close">Fechar</button>
-          </div>
-          <div id="script2" class="script-details hidden">
-            <h2>Script Blox Fruits Atualizado!</h2>
-            <pre><code>local Settings = {
+  <div class="details-container">
+    <div id="script1" class="script-details hidden">
+      <h2>Script Apocalypse Rising 2 atualizado!</h2>
+      <code>loadstring(game:HttpGet("https://raiidev.xyz/rain/loader"))()</code>
+      <button class="btn-copy">Copiar</button>
+      <button class="btn-close">Fechar</button>
+    </div>
+    <div id="script2" class="script-details hidden">
+      <h2>Script Blox Fruits Atualizado!</h2>
+      <pre><code>local Settings = {
   JoinTeam = "Pirates";
   Translator = false;
 }
 loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/heads/main/main.luau"))(Settings)
 </code></pre>
-            <button class="btn-copy">Copiar</button>
-            <button class="btn-close">Fechar</button>
-          </div>
-          <div id="script3" class="script-details hidden">
-            <h2>Script Plants vs Brainrots Atualizado!</h2>
-            <code>loadstring(game:HttpGet("https://raiidev.xyz/rain/loader"))()</code>
-            <button class="btn-copy">Copiar</button>
-            <button class="btn-close">Fechar</button>
-          </div>
-          <div id="script4" class="script-details hidden">
-            <h2>Script Counter Blox Atualizado!</h2>
-            <code>loadstring(game:HttpGet("https://raiidev.xyz/rain/loader"))()</code>
-            <button class="btn-copy">Copiar</button>
-            <button class="btn-close">Fechar</button>
-          </div>
-          <div id="script5" class="script-details hidden">
-            <h2>Script MM2 Atualizado!</h2>
-            <code>loadstring(game:HttpGet("https://raiidev.xyz/rain/loader"))()</code>
-            <button class="btn-copy">Copiar</button>
-            <button class="btn-close">Fechar</button>
-          </div>
-          <div id="script6" class="script-details hidden">
-            <h2>Outro Script Universal!</h2>
-            <code>loadstring(game:HttpGet("https://raiidev.xyz/rain/loader"))()</code>
-            <button class="btn-copy">Copiar</button>
-            <button class="btn-close">Fechar</button>
-          </div>
-        </div>
-      </section>
+      <button class="btn-copy">Copiar</button>
+      <button class="btn-close">Fechar</button>
+    </div>
+    <div id="script3" class="script-details hidden">
+      <h2>Script Plants vs Brainrots Atualizado!</h2>
+      <code>loadstring(game:HttpGet("https://raiidev.xyz/rain/loader"))()</code>
+      <button class="btn-copy">Copiar</button>
+      <button class="btn-close">Fechar</button>
+    </div>
+    <div id="script4" class="script-details hidden">
+      <h2>Script Counter Blox Atualizado!</h2>
+      <code>loadstring(game:HttpGet("https://raiidev.xyz/rain/loader"))()</code>
+      <button class="btn-copy">Copiar</button>
+      <button class="btn-close">Fechar</button>
+    </div>
+    <div id="script5" class="script-details hidden">
+      <h2>Script MM2 Atualizado!</h2>
+      <code>loadstring(game:HttpGet("https://raiidev.xyz/rain/loader"))()</code>
+      <button class="btn-copy">Copiar</button>
+      <button class="btn-close">Fechar</button>
+    </div>
+    <div id="script6" class="script-details hidden">
+      <h2>Fly universal</h2>
+      <code>loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()</code>
+      <button class="btn-copy">Copiar</button>
+      <button class="btn-close">Fechar</button>
+    </div>
+    <div id="script7" class="script-details hidden">
+      <h2>Esp universal</h2>
+      <code>loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()</code>
+      <button class="btn-copy">Copiar</button>
+      <button class="btn-close">Fechar</button>
+    </div>
+  </div>
+</section>
 
       <!-- LOADSTRING -->
       <section id="loadstring" class="tab-content">
