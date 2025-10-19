@@ -405,7 +405,7 @@ footer {
 
 /* BUTTON GROUP */
 #loadstring .btn-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-#loadstring .btn-group .btn { min-width: 150px; padding: 14px 20px; }
+#loadstring .btn-group .btn { min-width: 160px; padding: 15px 28px; }
 
 /* CODE PREVIEW */
 #loadstring pre, #loadstring code {
@@ -426,8 +426,8 @@ footer {
 #loadstring pre::before {
   content: 'LOADSTRING';
   position: absolute;
-  top: -14px;
-  left: 16px;
+  top: -10px;
+  left: 20px;
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--accent);
@@ -560,3 +560,211 @@ body[data-theme="light"] {
 }
 .glass-card:hover { transform: translateY(-6px); box-shadow: 0 12px 42px rgba(255,76,76,0.4); }
 
+/* =======================
+   AJUSTES RÁPIDOS: MISC & REDES - AUMENTAR YT & SUBIR BLOCOS
+   Cole este bloco AO FINAL do seu style.css (faz override apenas nas partes solicitadas)
+======================= */
+
+/* --- Elevar mais as cards da seção MISC (pull-up maior) --- */
+#misc .card-container {
+  margin-top: -300px;                 /* puxa mais para cima */
+  transform: translateY(-20px);      /* levanta visualmente as cards */
+  transition: transform 240ms ease, margin-top 240ms ease;
+  z-index: 20;                       /* garante que fique sobre elementos vizinhos */
+}
+
+/* Em telas menores reduzimos a intensidade para evitar sobreposição */
+@media (max-width: 992px) {
+  #misc .card-container {
+    margin-top: -30px;
+    transform: translateY(-12px);
+  }
+}
+
+/* --- Elevar o bloco de REDES para cima (pull-up maior) --- */
+.redes-container {
+  margin-top: -290px;                 /* puxa o bloco de redes mais para cima */
+  transform: translateY(-22px);
+  transition: transform 240ms ease, margin-top 240ms ease;
+  position: relative;
+  z-index: 30;                       /* mantém redes acima do conteúdo adjacente */
+}
+
+/* ajuste menos agressivo em telas médias/pequenas */
+@media (max-width: 992px) {
+  .redes-container {
+    margin-top: -28px;
+    transform: translateY(-14px);
+  }
+}
+@media (max-width: 480px) {
+  .redes-container {
+    margin-top: -12px;
+    transform: translateY(-6px);
+  }
+}
+
+/* --- YouTube (segunda rede): aumentar imagem/perfil e ajustar layout --- */
+/* Aumenta o círculo do perfil (perfilyt.png) e ajusta padding/altura do box */
+.redes-container .rede-box:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  justify-content: flex-start;
+  padding: 21px 21px;
+  min-height: 112px;                /* maior para acomodar o novo círculo */
+}
+
+/* Esconde a img original (se existir) e usamos o pseudo ::before para o perfil */
+.redes-container .rede-box:nth-child(2) img.rede-img {
+  display: none !important;
+}
+
+/* Perfil circular maior */
+.redes-container .rede-box:nth-child(2)::before {
+  content: "";
+  display: inline-block;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background-image: url("img/perfilyt.png");
+  background-size: cover;
+  background-position: center;
+  border: 4px solid rgba(255,76,76,0.16);
+  box-shadow:
+    0 10px 28px rgba(0,0,0,0.65),
+    0 0 28px rgba(255,76,76,0.08);
+  flex-shrink: 0;
+}
+
+/* Ajusta título visível 'bnz' ao lado do perfil */
+.redes-container .rede-box:nth-child(2) .rede-nome {
+  color: transparent;                 /* escondemos o conteúdo textual original */
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 1em;
+  display: inline-block;
+}
+
+/* Conteúdo visual substituto "bnz" com escala maior e estilo */
+.redes-container .rede-box:nth-child(2) .rede-nome::after {
+  content: "bnz";
+  color: var(--accent);
+  font-weight: 900;
+  font-size: 1.6rem;
+  letter-spacing: 0.6px;
+  text-transform: lowercase;
+  display: inline-block;
+  line-height: 1;
+  margin-left: 4px;
+  text-shadow: 0 0 10px rgba(255,76,76,0.06);
+}
+
+/* Pequeno subtítulo/label do canal (opcional) - usamos ::before no texto para adicionar "YouTube" */
+.redes-container .rede-box:nth-child(2) .rede-nome::before {
+  content: "YouTube";
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  opacity: 0.9;
+}
+
+/* Em telas menores reduzimos o círculo e o tamanho do texto */
+@media (max-width: 768px) {
+  .redes-container .rede-box:nth-child(2) {
+    min-height: 88px;
+    padding: 14px;
+  }
+  .redes-container .rede-box:nth-child(2)::before {
+    width: 72px;
+    height: 72px;
+    border-width: 3px;
+  }
+  .redes-container .rede-box:nth-child(2) .rede-nome::after {
+    font-size: 1.25rem;
+  }
+  .redes-container .rede-box:nth-child(2) .rede-nome::before {
+    font-size: 0.72rem;
+  }
+}
+@media (max-width: 480px) {
+  .redes-container .rede-box:nth-child(2) {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    min-height: auto;
+  }
+  .redes-container .rede-box:nth-child(2)::before {
+    width: 64px;
+    height: 64px;
+  }
+  .redes-container .rede-box:nth-child(2) .rede-nome::after {
+    font-size: 1.05rem;
+  }
+  .redes-container .rede-box:nth-child(2) .rede-nome::before {
+    display: none; /* simplifica no mobile */
+  }
+}
+
+/* --- Evitar overlap com outros elementos (ajuste fino) --- */
+.container {
+  /* se seu .container tiver padding-top pequeno, garantir espaço para os blocos levantados */
+  padding-top: 20px;
+  position: relative;
+}
+
+/* ajuste de z-index para garantir que detalhes/popups fiquem sobre o conteúdo */
+.executor-details, .script-details, #loadstring {
+  position: relative;
+  z-index: 30;
+}
+
+/* move todo o bloco um pouco pra baixo na página */
+.loadstring-wrapper {
+  margin-top: 28px; /* aumenta esse valor pra empurrar mais pra baixo (px) */
+  position: relative; /* mantém contexto para posicionamento do botão */
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.03); /* sutil */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* área que mostra o código (pre/textarea) */
+.loadstring-display {
+  margin-top: 12px; /* espaço entre label e a área de exibição */
+  max-height: 180px; /* ajuste conforme necessário */
+  overflow: auto;
+  padding: 10px;
+  border-radius: 6px;
+  background: rgba(0,0,0,0.6);
+  color: #e6e6e6;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+/* botão copiar — posicionado mais para baixo relativo ao container */
+.copy-btn {
+  display: inline-block;
+  margin-top: 17px;    /* empurra o botão pra baixo em relação à área de exibição */
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(0,0,0,0.25));
+}
+
+/* alternativa: botao fixo no canto inferior direito do bloco */
+.copy-btn.fixed {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  margin-top: 0; /* anula margin-top quando usar fixed */
+}
