@@ -21,7 +21,7 @@ header {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #5cb6f9;
+  color: #e74c3c; /* vermelho principal */
 }
 
 .layout {
@@ -58,7 +58,7 @@ header {
 
 .sidebar ul li a.active,
 .sidebar ul li a:hover {
-  background: #5cb6f9;
+  background: #e74c3c; /* ativo/hover vermelho */
   color: #121212;
 }
 
@@ -90,13 +90,13 @@ header {
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #5cb6f9;
+  border: 3px solid #e74c3c;
 }
 
 .intro-text h1 {
   font-size: 2.8rem;
   margin-bottom: 10px;
-  color: #5cb6f9;
+  color: #e74c3c;
 }
 
 .intro-text p {
@@ -107,7 +107,7 @@ header {
 }
 
 .social-links a {
-  color: #5cb6f9;
+  color: #e74c3c;
   margin-right: 20px;
   font-size: 1.2rem;
   text-decoration: none;
@@ -115,7 +115,7 @@ header {
 }
 
 .social-links a:hover {
-  color: #1a8cd8;
+  color: #c0392b;
 }
 
 .banner-container {
@@ -127,7 +127,7 @@ header {
   max-height: 300px;
   object-fit: cover;
   border-radius: 10px;
-  border: 2px solid #5cb6f9;
+  border: 2px solid #e74c3c;
 }
 
 .card-container {
@@ -141,7 +141,7 @@ header {
 .script-card {
   background: #222;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgb(92 182 249 / 0.3);
+  box-shadow: 0 0 15px rgb(231 76 60 / 0.3);
   cursor: pointer;
   text-align: center;
   padding: 15px 10px 20px;
@@ -160,14 +160,14 @@ header {
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 12px;
-  border: 2px solid #5cb6f9;
+  border: 2px solid #e74c3c;
 }
 
 .card p,
 .script-card p {
   font-weight: 700;
   font-size: 1.15rem;
-  color: #5cb6f9;
+  color: #e74c3c;
   text-transform: capitalize;
 }
 
@@ -180,7 +180,7 @@ header {
   background: #222;
   border-radius: 12px;
   padding: 25px;
-  box-shadow: 0 0 20px rgb(92 182 249 / 0.6);
+  box-shadow: 0 0 20px rgb(231 76 60 / 0.6);
   max-width: 600px;
   margin: 0 auto 30px auto;
   color: #ccc;
@@ -193,21 +193,21 @@ header {
   height: 150px;
   object-fit: cover;
   border-radius: 10px;
-  border: 2px solid #5cb6f9;
+  border: 2px solid #e74c3c;
   display: block;
   margin: 15px auto;
 }
 
 .executor-details h2,
 .script-details h2 {
-  color: #5cb6f9;
+  color: #e74c3c;
   margin-bottom: 10px;
   text-align: center;
 }
 
 .executor-details p a,
 .script-details p a {
-  color: #1a8cd8;
+  color: #c0392b;
   text-decoration: none;
   font-weight: 600;
   display: block;
@@ -217,7 +217,7 @@ header {
 
 .btn-close,
 .script-details button {
-  background-color: #5cb6f9;
+  background-color: #e74c3c;
   color: white;
   border: none;
   padding: 10px 18px;
@@ -230,12 +230,12 @@ header {
 }
 
 .script-details button:hover {
-  background-color: #1a8cd8;
+  background-color: #c0392b;
   box-shadow: 0 5px 10px rgba(0,0,0,0.3);
 }
 
 .script-details button:active {
-  background-color: #1463a7;
+  background-color: #992d22;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   transform: translateY(1px);
 }
@@ -254,17 +254,17 @@ header {
 #redes ul li a {
   display: inline-block;
   background: #222;
-  color: #5cb6f9;
+  color: #e74c3c;
   font-weight: 700;
   padding: 12px 20px;
   border-radius: 10px;
   text-decoration: none;
-  box-shadow: 0 0 15px rgb(92 182 249 / 0.4);
+  box-shadow: 0 0 15px rgb(231 76 60 / 0.4);
   transition: background-color 0.3s ease;
 }
 
 #redes ul li a:hover {
-  background: #1a8cd8;
+  background: #c0392b;
   color: #fff;
 }
 
