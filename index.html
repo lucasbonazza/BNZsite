@@ -19,6 +19,8 @@
         <li><a href="#" data-tab="scripts">Scripts</a></li>
         <li><a href="#" data-tab="misc">Misc</a></li>
         <li><a href="#" data-tab="redes">Redes</a></li>
+        <!-- Nova aba: Loadstring Generator -->
+        <li><a href="#" data-tab="loadgen">Loadstring Generator</a></li>
       </ul>
     </aside>
 
@@ -155,18 +157,18 @@
             <button class="btn-close">Fechar</button>
           </div>
 
-<div id="script2" class="script-details hidden">
-  <h2>Script Blox Fruits Atualizado!</h2>
-  <pre><code>local Settings = {
+          <div id="script2" class="script-details hidden">
+            <h2>Script Blox Fruits Atualizado!</h2>
+            <pre><code>local Settings = {
     JoinTeam = "Pirates"; -- Pirates / Marines
     Translator = false;   -- true / false
 }
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/heads/main/main.luau"))(Settings)
-  </code></pre>
-  <button class="btn-copy">Copiar</button>
-  <button class="btn-close">Fechar</button>
-</div>
+</code></pre>
+            <button class="btn-copy">Copiar</button>
+            <button class="btn-close">Fechar</button>
+          </div>
 
           <div id="em breve...." class="script-details hidden">
             <h2>em breve....</h2>
@@ -198,31 +200,58 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/h
         </div>
       </section>
 
-<!-- MISC -->
-<section id="misc" class="tab-content">
-  <h1>Misc</h1>
-  <div class="card-container">
-    <a href="https://bypassunlock.com" target="_blank" class="card misc-card">
-      <img src="img/bypass.png" alt="Bypass Encurtadores" />
-      <p>Bypass Encurtadores</p>
-    </a>
-  </div>
-</section>
+      <!-- MISC -->
+      <section id="misc" class="tab-content">
+        <h1>Misc</h1>
+        <div class="card-container">
+          <a href="https://bypassunlock.com" target="_blank" class="card misc-card">
+            <img src="img/bypass.png" alt="Bypass Encurtadores" />
+            <p>Bypass Encurtadores</p>
+          </a>
+        </div>
+      </section>
 
       <!-- REDES -->
-<section id="redes" class="tab-content">
-  <h1>Redes Sociais</h1>
-  <div class="redes-container">
-    <div class="rede-box">
-      <img src="img/discord.png" alt="Discord" class="rede-img" />
-      <p class="rede-nome">Discord</p>
-    </div>
-    <div class="rede-box">
-      <img src="img/youtube.png" alt="YouTube" class="rede-img" />
-      <p class="rede-nome">YouTube</p>
-    </div>
+      <section id="redes" class="tab-content">
+        <h1>Redes Sociais</h1>
+        <div class="redes-container">
+          <div class="rede-box">
+            <img src="img/discord.png" alt="Discord" class="rede-img" />
+            <p class="rede-nome">Discord</p>
+          </div>
+          <div class="rede-box">
+            <img src="img/youtube.png" alt="YouTube" class="rede-img" />
+            <p class="rede-nome">YouTube</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOADSTRING GENERATOR -->
+      <section id="loadgen" class="tab-content">
+        <h1>Loadstring Generator</h1>
+        <p>Cole seu link abaixo e clique em "Gerar" para criar o snippet:</p>
+
+        <div class="loadgen-form">
+          <label for="load-input" class="visually-hidden">Link</label>
+          <input id="load-input" class="loadgen-input" type="url" placeholder="https://seuscript.com/raw.lua" />
+          <button id="btn-generate" class="btn-generate">Gerar</button>
+        </div>
+
+        <div class="loadgen-result hidden" id="load-result">
+          <p class="result-label">Snippet gerado:</p>
+          <code id="load-output" class="load-output">loadstring(game:HttpGet("https://exemplo.com"))()</code>
+          <div class="loadgen-actions">
+            <button id="btn-copy-load" class="btn-copy">Copiar</button>
+            <button id="btn-clear-load" class="btn-clear">Limpar</button>
+          </div>
+          <p class="hint">Dica: se o link não incluir protocolo (http/https), é recomendado incluir https://</p>
+        </div>
+      </section>
+
+      <!-- espaço extra -->
+      <div style="height: 60px;"></div>
+    </main>
   </div>
-</section>
 
   <script src="script.js"></script>
 </body>
