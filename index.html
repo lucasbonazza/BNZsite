@@ -24,6 +24,7 @@
     </aside>
 
     <main class="container">
+
       <!-- INÍCIO -->
       <section id="inicio" class="tab-content active">
         <div class="intro-box">
@@ -32,12 +33,11 @@
             <h1>BNZ Community</h1>
             <p>Bem-vindo à comunidade BNZ! Aqui você encontra nossos executores, scripts e redes sociais.</p>
             <div class="social-links">
-              <a href="https://www.youtube.com/@bnz-m5k" target="_blank" rel="noopener noreferrer">🎥 YouTube</a>
-              <a href="https://discord.gg/996WTDfBXy" target="_blank" rel="noopener noreferrer">💬 Discord</a>
+              <a href="https://www.youtube.com/@bnz-m5k" target="_blank">🎥 YouTube</a>
+              <a href="https://discord.gg/996WTDfBXy" target="_blank">💬 Discord</a>
             </div>
           </div>
         </div>
-
         <div class="banner-container">
           <img src="img/seu-banner-aqui.png" alt="Banner BNZ" class="banner-img" />
         </div>
@@ -45,23 +45,39 @@
 
       <!-- EXECUTORES -->
       <section id="executores" class="tab-content">
-        <h1>Executores Atualizados</h1>
-        <div class="card-container">
-          <div class="card" data-id="velocity PC">
-            <img src="img/velocity.png" alt="velocity PC" />
-            <p>velocity PC</p>
+        <h1>Executores</h1>
+        <div class="sub-tabs">
+          <button class="sub-tab default active" data-sub="executores-pc">PC</button>
+          <button class="sub-tab" data-sub="executores-mobile">Mobile</button>
+        </div>
+
+        <div id="executores-pc" class="sub-tab-content active">
+          <div class="card-container">
+            <div class="card" data-id="velocity PC">
+              <img src="img/velocity.png" alt="velocity PC" />
+              <p>velocity PC</p>
+            </div>
+            <div class="card" data-id="Solara PC">
+              <img src="img/solara.png" alt="Solara PC" />
+              <p>Solara PC</p>
+            </div>
+            <div class="card" data-id="Vulcan PC">
+              <img src="img/Vulcan.png" alt="Vulcan PC" />
+              <p>Vulcan PC</p>
+            </div>
           </div>
-          <div class="card" data-id="Solara PC">
-            <img src="img/solara.png" alt="Solara PC" />
-            <p>Solara PC</p>
-          </div>
-          <div class="card" data-id="Delta MOBILE">
-            <img src="img/delta.png" alt="Delta MOBILE" />
-            <p>Delta MOBILE</p>
-          </div>
-          <div class="card" data-id="Vulcan PC">
-            <img src="img/Vulcan.png" alt="Vulcan PC" />
-            <p>Vulcan PC</p>
+        </div>
+
+        <div id="executores-mobile" class="sub-tab-content">
+          <div class="card-container">
+            <div class="card" data-id="Delta MOBILE">
+              <img src="img/delta.png" alt="Delta MOBILE" />
+              <p>Delta MOBILE</p>
+            </div>
+            <div class="card" data-id="Solara MOBILE">
+              <img src="img/solara.png" alt="Solara MOBILE" />
+              <p>Solara MOBILE</p>
+            </div>
           </div>
         </div>
 
@@ -72,101 +88,121 @@
             <p><a href="https://velocity-executor.com/">Baixe o velocity</a></p>
             <button class="btn-close">Fechar</button>
           </div>
-
           <div id="Solara PC" class="executor-details hidden">
             <h2>Solara PC</h2>
             <img src="img/solara.png" alt="Solara PC" />
-            <p><a href="https://getsolara.dev/" target="_blank" rel="noopener noreferrer">Baixe o solara</a></p>
+            <p><a href="https://getsolara.dev/" target="_blank">Baixe o solara</a></p>
             <button class="btn-close">Fechar</button>
           </div>
-
-          <div id="Delta MOBILE" class="executor-details hidden">
-            <h2>Delta MOBILE</h2>
-            <img src="img/delta.png" alt="Delta MOBILE" />
-            <p><a href="https://delta-executor.com/" target="_blank" rel="noopener noreferrer">Baixar delta</a></p>
-            <button class="btn-close">Fechar</button>
-          </div>
-
           <div id="Vulcan PC" class="executor-details hidden">
             <h2>Vulcan PC</h2>
             <img src="img/Vulcan.png" alt="Vulcan PC" />
-            <p><a href="https://volcanoexecutor.com/download/" target="_blank" rel="noopener noreferrer">Vulcan PC</a></p>
+            <p><a href="https://volcanoexecutor.com/download/" target="_blank">Vulcan PC</a></p>
+            <button class="btn-close">Fechar</button>
+          </div>
+          <div id="Delta MOBILE" class="executor-details hidden">
+            <h2>Delta MOBILE</h2>
+            <img src="img/delta.png" alt="Delta MOBILE" />
+            <p><a href="https://delta-executor.com/" target="_blank">Baixar delta</a></p>
+            <button class="btn-close">Fechar</button>
+          </div>
+          <div id="Solara MOBILE" class="executor-details hidden">
+            <h2>Solara MOBILE</h2>
+            <img src="img/solara.png" alt="Solara MOBILE" />
+            <p><a href="https://getsolara.dev/" target="_blank">Baixe o solara</a></p>
             <button class="btn-close">Fechar</button>
           </div>
         </div>
       </section>
 
       <!-- SCRIPTS -->
-<section id="scripts" class="tab-content">
-  <h1>Scripts Atualizados</h1>
-  <div class="card-container">
-    <div class="script-card" data-id="script1">
-      <img src="img/script1.png" alt="Apocalypse Rising 2" />
-      <p>Apocalypse Rising 2</p>
-    </div>
-    <div class="script-card" data-id="script2">
-      <img src="img/script2.png" alt="RedZHub" />
-      <p>RedZHub</p>
-    </div>
-    <div class="script-card" data-id="script3">
-      <img src="img/script3.png" alt="Plants vs Brainrots" />
-      <p>Plants vs Brainrots</p>
-    </div>
-    <div class="script-card" data-id="script4">
-      <img src="img/script4.png" alt="Counter Blox" />
-      <p>Counter Blox</p>
-    </div>
-    <div class="script-card" data-id="script5">
-      <img src="img/script5.png" alt="MM2" />
-      <p>MM2</p>
-    </div>
-  </div>
+      <section id="scripts" class="tab-content">
+        <h1>Scripts</h1>
+        <div class="sub-tabs">
+          <button class="sub-tab default active" data-sub="scripts-jogos">Jogos</button>
+          <button class="sub-tab" data-sub="scripts-universal">Universal</button>
+        </div>
 
-  <div class="details-container">
-    <div id="script1" class="script-details hidden">
-      <h2>Script Apocalypse Rising 2 atualizado!</h2>
-      <code>loadstring(game:HttpGet("https://raiidev.xyz/rain/loader", true))()</code>
-      <button class="btn-copy">Copiar</button>
-      <button class="btn-close">Fechar</button>
-    </div>
+        <div id="scripts-jogos" class="sub-tab-content active">
+          <div class="card-container">
+            <div class="script-card" data-id="script1">
+              <img src="img/script1.png" alt="Apocalypse Rising 2" />
+              <p>Apocalypse Rising 2</p>
+            </div>
+            <div class="script-card" data-id="script2">
+              <img src="img/script2.png" alt="RedZHub" />
+              <p>RedZHub</p>
+            </div>
+            <div class="script-card" data-id="script3">
+              <img src="img/script3.png" alt="Plants vs Brainrots" />
+              <p>Plants vs Brainrots</p>
+            </div>
+          </div>
+        </div>
 
-    <div id="script2" class="script-details hidden">
-      <h2>Script Blox Fruits Atualizado!</h2>
-      <pre><code>local Settings = {
-  JoinTeam = "Pirates"; -- Pirates / Marines
-  Translator = false;   -- true / false
+        <div id="scripts-universal" class="sub-tab-content">
+          <div class="card-container">
+            <div class="script-card" data-id="script4">
+              <img src="img/script4.png" alt="Counter Blox" />
+              <p>Counter Blox</p>
+            </div>
+            <div class="script-card" data-id="script5">
+              <img src="img/script5.png" alt="MM2" />
+              <p>MM2</p>
+            </div>
+            <div class="script-card" data-id="script6">
+              <img src="img/script6.png" alt="Outro Script" />
+              <p>Outro Script</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="details-container">
+          <div id="script1" class="script-details hidden">
+            <h2>Script Apocalypse Rising 2 atualizado!</h2>
+            <code>loadstring(game:HttpGet("https://raiidev.xyz/rain/loader"))()</code>
+            <button class="btn-copy">Copiar</button>
+            <button class="btn-close">Fechar</button>
+          </div>
+          <div id="script2" class="script-details hidden">
+            <h2>Script Blox Fruits Atualizado!</h2>
+            <pre><code>local Settings = {
+  JoinTeam = "Pirates";
+  Translator = false;
 }
-
 loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/heads/main/main.luau"))(Settings)
 </code></pre>
-      <button class="btn-copy">Copiar</button>
-      <button class="btn-close">Fechar</button>
-    </div>
+            <button class="btn-copy">Copiar</button>
+            <button class="btn-close">Fechar</button>
+          </div>
+          <div id="script3" class="script-details hidden">
+            <h2>Script Plants vs Brainrots Atualizado!</h2>
+            <code>loadstring(game:HttpGet("https://raiidev.xyz/rain/loader"))()</code>
+            <button class="btn-copy">Copiar</button>
+            <button class="btn-close">Fechar</button>
+          </div>
+          <div id="script4" class="script-details hidden">
+            <h2>Script Counter Blox Atualizado!</h2>
+            <code>loadstring(game:HttpGet("https://raiidev.xyz/rain/loader"))()</code>
+            <button class="btn-copy">Copiar</button>
+            <button class="btn-close">Fechar</button>
+          </div>
+          <div id="script5" class="script-details hidden">
+            <h2>Script MM2 Atualizado!</h2>
+            <code>loadstring(game:HttpGet("https://raiidev.xyz/rain/loader"))()</code>
+            <button class="btn-copy">Copiar</button>
+            <button class="btn-close">Fechar</button>
+          </div>
+          <div id="script6" class="script-details hidden">
+            <h2>Outro Script Universal!</h2>
+            <code>loadstring(game:HttpGet("https://raiidev.xyz/rain/loader"))()</code>
+            <button class="btn-copy">Copiar</button>
+            <button class="btn-close">Fechar</button>
+          </div>
+        </div>
+      </section>
 
-    <div id="script3" class="script-details hidden">
-      <h2>Script Plants vs Brainrots Atualizado!</h2>
-      <code>loadstring(game:HttpGet("https://raiidev.xyz/rain/loader"))()", true))()</code>
-      <button class="btn-copy">Copiar</button>
-      <button class="btn-close">Fechar</button>
-    </div>
-
-    <div id="script4" class="script-details hidden">
-      <h2>Script Counter Blox Atualizado!</h2>
-      <code>loadstring(game:HttpGet("https://raiidev.xyz/rain/loader"))()", true))()</code>
-      <button class="btn-copy">Copiar</button>
-      <button class="btn-close">Fechar</button>
-    </div>
-
-    <div id="script5" class="script-details hidden">
-      <h2>Script MM2 Atualizado!</h2>
-      <code>loadstring(game:HttpGet("https://raiidev.xyz/rain/loader"))()", true))()</code>
-      <button class="btn-copy">Copiar</button>
-      <button class="btn-close">Fechar</button>
-    </div>
-  </div>
-</section>
-
-      <!-- LOADSTRING GENERATOR -->
+      <!-- LOADSTRING -->
       <section id="loadstring" class="tab-content">
         <h1>Gerador de Loadstring</h1>
         <div class="loadstring-generator">
@@ -182,20 +218,20 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/h
         </div>
       </section>
 
-<!-- MISC -->
-<section id="misc" class="tab-content">
-  <h1>Misc</h1>
-  <div class="card-container">
-    <a href="https://bypassunlock.com" target="_blank" class="card misc-card">
-      <img src="img/bypass.png" alt="Bypass Encurtadores" />
-      <p>Bypass Encurtadores</p>
-    </a>
-    <a href="https://github.com/copilot" target="_blank" class="card misc-card">
-      <img src="img/copilot.png" alt="Várias IA" />
-      <p>Várias IA em um lugar só</p>
-    </a>
-  </div>
-</section>
+      <!-- MISC -->
+      <section id="misc" class="tab-content">
+        <h1>Misc</h1>
+        <div class="card-container">
+          <a href="https://bypassunlock.com" target="_blank" class="card misc-card">
+            <img src="img/bypass.png" alt="Bypass Encurtadores" />
+            <p>Bypass Encurtadores</p>
+          </a>
+          <a href="https://github.com/copilot" target="_blank" class="card misc-card">
+            <img src="img/copilot.png" alt="Várias IA" />
+            <p>Várias IA em um lugar só</p>
+          </a>
+        </div>
+      </section>
 
       <!-- REDES -->
       <section id="redes" class="tab-content">
@@ -211,6 +247,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/h
           </div>
         </div>
       </section>
+
     </main>
   </div>
 
